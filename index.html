@@ -1,147 +1,679 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background-color: #333; padding: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fellowships.html">Fellowships</a>
-    <a href="resources.html">Resources</a>
-    <a href="organizations.html">Organizations</a>
-    <a href="more-info.html">More Info</a>
-  </nav>
-  <div class="content">
-    <h1>Welcome to the Home Page</h1>
-    <p>This page is currently empty.</p>
-  </div>
-</body>
-</html>
-
-<!-- fellowships.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fellowships</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background-color: #333; padding: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fellowships.html">Fellowships</a>
-    <a href="resources.html">Resources</a>
-    <a href="organizations.html">Organizations</a>
-    <a href="more-info.html">More Info</a>
-  </nav>
-  <div class="content">
-    <h1>Fellowships Page</h1>
-    <p>This page is currently empty.</p>
-  </div>
-</body>
-</html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathways to Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- resources.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background-color: #333; padding: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fellowships.html">Fellowships</a>
-    <a href="resources.html">Resources</a>
-    <a href="organizations.html">Organizations</a>
-    <a href="more-info.html">More Info</a>
-  </nav>
-  <div class="content">
-    <h1>Resources Page</h1>
-    <p>This page is currently empty.</p>
-  </div>
-</body>
-</html>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
 
-<!-- organizations.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organizations</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background-color: #333; padding: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fellowships.html">Fellowships</a>
-    <a href="resources.html">Resources</a>
-    <a href="organizations.html">Organizations</a>
-    <a href="more-info.html">More Info</a>
-  </nav>
-  <div class="content">
-    <h1>Organizations Page</h1>
-    <p>This page is currently empty.</p>
-  </div>
-</body>
-</html>
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
 
-<!-- more-info.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More Info</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background-color: #333; padding: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-  </style>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Home Page Styles */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23e2e8f0" opacity="0.3"/><circle cx="90" cy="90" r="1" fill="%23cbd5e1" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .feature-card h3 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #64748b;
+        }
+
+        /* Page Content */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter System */
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* About Page Styles */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-content h2 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .about-content p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .filters {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .card:nth-child(2n) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(3n) {
+            animation-delay: 0.2s;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="fellowships.html">Fellowships</a>
-    <a href="resources.html">Resources</a>
-    <a href="organizations.html">Organizations</a>
-    <a href="more-info.html">More Info</a>
-  </nav>
-  <div class="content">
-    <h1>More Info Page</h1>
-    <p>This page is currently empty.</p>
-  </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Pathways to Policy</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                <li><a href="#" class="nav-link" data-page="organizations">Organizations</a></li>
+                <li><a href="#" class="nav-link" data-page="resources">Resources</a></li>
+                <li><a href="#" class="nav-link" data-page="fellowships">Fellowships</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Pathways to Policy</h1>
+                <p>Connecting passionate individuals with opportunities to create meaningful policy change and build a better future for all.</p>
+                <a href="#" class="cta-button" data-page="about">Learn More</a>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Organizations</h3>
+                    <p>Discover policy-focused organizations making a difference. Connect with groups aligned with your values and expertise.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Resources</h3>
+                    <p>Access curated tools, guides, and educational materials to enhance your policy knowledge and effectiveness.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Fellowships</h3>
+                    <p>Find competitive fellowship opportunities that provide hands-on experience in policy development and implementation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <div class="page-header">
+                <h1 class="page-title">About Pathways to Policy</h1>
+                <p class="page-subtitle">Our mission is to democratize access to policy careers and create pathways for diverse voices in governance.</p>
+            </div>
+            <div class="about-content">
+                <p>Pathways to Policy was founded on the belief that effective policy-making requires diverse perspectives and inclusive participation. We recognize that traditional pathways to policy careers often exclude talented individuals from underrepresented communities.</p>
+                
+                <h2>Our Mission</h2>
+                <p>We work to break down barriers and create accessible entry points for individuals passionate about public service and policy change. Through our platform, we connect aspiring policy professionals with organizations, resources, and fellowship opportunities that can launch and accelerate their careers.</p>
+                
+                <h2>What We Do</h2>
+                <p>Our comprehensive platform serves as a bridge between talent and opportunity. We curate and organize policy-related organizations, educational resources, and fellowship programs to help individuals navigate the complex landscape of policy careers.</p>
+                
+                <p>Whether you're a recent graduate, career changer, or experienced professional looking to pivot into policy work, Pathways to Policy provides the tools and connections you need to succeed.</p>
+            </div>
+        </div>
+
+        <!-- Organizations Page -->
+        <div id="organizations" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Organizations</h1>
+                <p class="page-subtitle">Discover policy organizations making an impact across various sectors and causes.</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="think-tank">Think Tanks</button>
+                <button class="filter-btn" data-filter="advocacy">Advocacy</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+                <button class="filter-btn" data-filter="government">Government</button>
+                <button class="filter-btn" data-filter="nonprofit">Nonprofit</button>
+            </div>
+
+            <div class="card-grid" id="organizations-grid">
+                
+                <!-- COPY THIS TEMPLATE TO ADD NEW ORGANIZATION CARDS -->
+                <!-- 
+                <div class="card" data-category="CATEGORY-NAME" onclick="window.open('URL-HERE', '_blank')">
+                    <div class="card-image">ABC</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Organization Name</h3>
+                        <p class="card-description">Brief description of what this organization does and their focus areas.</p>
+                        <div class="card-tags">
+                            <span class="tag">Tag1</span>
+                            <span class="tag">Tag2</span>
+                            <span class="tag">Tag3</span>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <!-- Example Cards - Replace with your own -->
+                <div class="card" data-category="think-tank" onclick="window.open('https://www.brookings.edu', '_blank')">
+                    <div class="card-image">BI</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Brookings Institution</h3>
+                        <p class="card-description">Leading think tank conducting high-quality, independent research and providing innovative policy solutions.</p>
+                        <div class="card-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Economics</span>
+                            <span class="tag">Foreign Policy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="think-tank" onclick="window.open('https://www.americanprogress.org', '_blank')">
+                    <div class="card-image">CAP</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Center for American Progress</h3>
+                        <p class="card-description">Progressive policy institute dedicated to improving lives through bold, progressive ideas and strong leadership.</p>
+                        <div class="card-tags">
+                            <span class="tag">Progressive</span>
+                            <span class="tag">Domestic Policy</span>
+                            <span class="tag">Climate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="advocacy" onclick="window.open('https://www.aclu.org', '_blank')">
+                    <div class="card-image">ACLU</div>
+                    <div class="card-content">
+                        <h3 class="card-title">American Civil Liberties Union</h3>
+                        <p class="card-description">Defending and preserving individual rights and liberties guaranteed by the Constitution and laws.</p>
+                        <div class="card-tags">
+                            <span class="tag">Civil Rights</span>
+                            <span class="tag">Legal</span>
+                            <span class="tag">Advocacy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Page -->
+        <div id="resources" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Resources</h1>
+                <p class="page-subtitle">Essential tools, guides, and educational materials for policy professionals.</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="guides">Guides</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+                <button class="filter-btn" data-filter="courses">Courses</button>
+                <button class="filter-btn" data-filter="databases">Databases</button>
+                <button class="filter-btn" data-filter="reports">Reports</button>
+            </div>
+
+            <div class="card-grid" id="resources-grid">
+                
+                <!-- COPY THIS TEMPLATE TO ADD NEW RESOURCE CARDS -->
+                <!-- 
+                <div class="card" data-category="CATEGORY-NAME" onclick="window.open('URL-HERE', '_blank')">
+                    <div class="card-image">ABC</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Resource Name</h3>
+                        <p class="card-description">Brief description of this resource and what it provides.</p>
+                        <div class="card-tags">
+                            <span class="tag">Tag1</span>
+                            <span class="tag">Tag2</span>
+                            <span class="tag">Tag3</span>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <!-- Example Cards - Replace with your own -->
+                <div class="card" data-category="guides" onclick="alert('Policy Writing Handbook - Comprehensive guide to writing effective policy briefs, memos, and reports.')">
+                    <div class="card-image">PWH</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Policy Writing Handbook</h3>
+                        <p class="card-description">Comprehensive guide to writing effective policy briefs, memos, and reports for various audiences.</p>
+                        <div class="card-tags">
+                            <span class="tag">Writing</span>
+                            <span class="tag">Communication</span>
+                            <span class="tag">Best Practices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="databases" onclick="window.open('https://www.govtrack.us', '_blank')">
+                    <div class="card-image">GT</div>
+                    <div class="card-content">
+                        <h3 class="card-title">GovTrack Database</h3>
+                        <p class="card-description">Track bills and votes in the U.S. Congress with detailed analytics and historical data.</p>
+                        <div class="card-tags">
+                            <span class="tag">Congress</span>
+                            <span class="tag">Legislation</span>
+                            <span class="tag">Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fellowships Page -->
+        <div id="fellowships" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Fellowships</h1>
+                <p class="page-subtitle">Competitive fellowship programs offering hands-on policy experience and professional development.</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="federal">Federal</button>
+                <button class="filter-btn" data-filter="state">State/Local</button>
+                <button class="filter-btn" data-filter="international">International</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+                <button class="filter-btn" data-filter="advocacy">Advocacy</button>
+            </div>
+
+            <div class="card-grid" id="fellowships-grid">
+                
+                <!-- COPY THIS TEMPLATE TO ADD NEW FELLOWSHIP CARDS -->
+                <!-- 
+                <div class="card" data-category="CATEGORY-NAME" onclick="window.open('URL-HERE', '_blank')">
+                    <div class="card-image">ABC</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Fellowship Name</h3>
+                        <p class="card-description">Brief description of this fellowship program and its requirements.</p>
+                        <div class="card-tags">
+                            <span class="tag">Tag1</span>
+                            <span class="tag">Tag2</span>
+                            <span class="tag">Tag3</span>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <!-- Example Cards - Replace with your own -->
+                <div class="card" data-category="federal" onclick="window.open('https://www.pmf.gov', '_blank')">
+                    <div class="card-image">PMF</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Presidential Management Fellows</h3>
+                        <p class="card-description">Premier leadership development program for advanced degree candidates entering federal service.</p>
+                        <div class="card-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Federal</span>
+                            <span class="tag">Graduate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="federal" onclick="alert('Congressional Fellowship Program - Immersive experience working in congressional offices.')">
+                    <div class="card-image">CFP</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Congressional Fellowship Program</h3>
+                        <p class="card-description">Immersive experience working in congressional offices and learning about legislative processes.</p>
+                        <div class="card-tags">
+                            <span class="tag">Congress</span>
+                            <span class="tag">Legislative</span>
+                            <span class="tag">Immersive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const ctaButton = document.querySelector('.cta-button');
+            const pages = document.querySelectorAll('.page');
+
+            function showPage(pageId) {
+                pages.forEach(page => page.classList.remove('active'));
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                document.getElementById(pageId).classList.add('active');
+                const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(link.dataset.page);
+                });
+            });
+
+            if (ctaButton) {
+                ctaButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(ctaButton.dataset.page);
+                });
+            }
+
+            // Initialize filter functionality
+            initializeFilters();
+        });
+
+        function initializeFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const parentPage = button.closest('.page');
+                    const pageFilterButtons = parentPage.querySelectorAll('.filter-btn');
+                    const cards = parentPage.querySelectorAll('.card');
+                    const filterValue = button.dataset.filter;
+                    
+                    // Update active filter button
+                    pageFilterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter cards
+                    cards.forEach(card => {
+                        if (filterValue === 'all' || card.dataset.category === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+    </script>
 </body>
 </html>
