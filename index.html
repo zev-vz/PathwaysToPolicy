@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pathways to Policy</title>
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -12,20 +12,21 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             background: #ffffff;
+            font-size: 16px;
         }
 
-        /* Navigation */
+        /* Navigation - Clean and minimal */
         nav {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: #ffffff;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e5e5e5;
         }
 
         .nav-container {
@@ -38,9 +39,10 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-decoration: none;
         }
 
         .nav-links {
@@ -50,17 +52,15 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #666;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
         }
 
         .nav-links a:hover, .nav-links a.active {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
+            color: #1a1a1a;
         }
 
         /* Main Content */
@@ -70,96 +70,113 @@
             padding: 2rem;
         }
 
-        /* Home Page Styles */
+        /* Hero Section - Simple and text-focused */
         .hero {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 4rem 2rem;
-            text-align: center;
-            border-radius: 20px;
-            margin-bottom: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23e2e8f0" opacity="0.3"/><circle cx="90" cy="90" r="1" fill="%23cbd5e1" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.1;
+            padding: 4rem 0;
+            text-align: left;
+            margin-bottom: 4rem;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #1e293b;
-            margin-bottom: 1rem;
-            position: relative;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            position: relative;
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.5;
         }
 
-        .cta-button {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
+        .hero-description {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        /* Filter/Search Bar */
+        .search-container {
+            margin-bottom: 3rem;
         }
 
-        .features {
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #fff;
+            transition: border-color 0.2s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        /* Content Grid - Clean card layout */
+        .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin-top: 2rem;
         }
 
-        .feature-card {
-            background: white;
+        .policy-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
             padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        .policy-card:hover {
+            border-color: #ccc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        .feature-card h3 {
-            color: #1e293b;
-            font-size: 1.4rem;
+        .policy-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .policy-description {
+            color: #666;
             margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
-        .feature-card p {
-            color: #64748b;
+        .policy-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
-        /* Page Content */
+        .tag {
+            background: #f5f5f5;
+            color: #666;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Page Content Styles */
         .page {
             display: none;
         }
@@ -169,169 +186,130 @@
         }
 
         .page-header {
-            text-align: center;
             margin-bottom: 3rem;
+            max-width: 800px;
         }
 
         .page-title {
             font-size: 2.5rem;
-            font-weight: bold;
-            color: #1e293b;
+            font-weight: 700;
+            color: #1a1a1a;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
         .page-subtitle {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Filter System */
-        .filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .filter-btn {
-            background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            color: #64748b;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: #3b82f6;
-            border-color: #3b82f6;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Card Grid */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
-        }
-
-        .card-image {
-            height: 200px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-description {
-            color: #64748b;
-            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: #666;
             line-height: 1.5;
         }
 
-        .card-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: #f1f5f9;
-            color: #475569;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* About Page Styles */
+        /* About Page */
         .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
+            max-width: 700px;
+            line-height: 1.7;
         }
 
         .about-content h2 {
-            color: #1e293b;
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem 0;
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem 0;
         }
 
         .about-content p {
-            color: #64748b;
+            color: #666;
             margin-bottom: 1.5rem;
+        }
+
+        .about-content a {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .about-content a:hover {
+            text-decoration: none;
+        }
+
+        /* Contributors section */
+        .contributors {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+
+        .contributors h3 {
+            color: #1a1a1a;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .contributors p {
+            color: #666;
+            font-size: 0.95rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
             .nav-links {
-                display: none;
+                gap: 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
-
             .page-title {
                 font-size: 2rem;
             }
 
-            .filters {
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding-bottom: 1rem;
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .card-grid {
-                grid-template-columns: 1fr;
+            .policy-card {
+                padding: 1.5rem;
             }
         }
 
-        /* Loading Animation */
-        @keyframes fadeInUp {
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.125rem;
+            }
+        }
+
+        /* Simple fade-in animation */
+        .policy-card {
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -339,16 +317,19 @@
             }
         }
 
-        .card {
-            animation: fadeInUp 0.6s ease-out;
+        /* Mobile menu toggle (hidden by default) */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
-        .card:nth-child(2n) {
-            animation-delay: 0.1s;
-        }
-
-        .card:nth-child(3n) {
-            animation-delay: 0.2s;
+        @media (max-width: 480px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
         }
     </style>
 </head>
