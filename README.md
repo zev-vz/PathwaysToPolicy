@@ -39,7 +39,7 @@ Pathways to Policy is a comprehensive digital resource hub designed to democrati
 - **Quality Control:** Vetted organizations and programs with accurate descriptions
 - **Accessibility:** Web Content Accessibility Guidelines (WCAG) compliance
 
-## 🤝 Intereested in Contributing?
+## 🤝 Interested in Contributing?
 
 ### 📝 Content Updates
 - **New Organizations:** Submit suggestions for additional policy organizations
