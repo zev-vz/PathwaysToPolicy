@@ -13,32 +13,9 @@ Pathways to Policy is a comprehensive digital resource hub designed to democrati
 **📚 Resources:** ~100 essential tools, publications, and educational materials  
 **🌐 Organizations covered:** My resource hub includes think tanks, government agencies, educational programs, and media outlets
 
-## 🔍 Content
-
-### 🏢 Organizations Directory
-**Comprehensive coverage across the policy ecosystem:**
-
-#### Think Tanks & Research Organizations
-#### Government Agencies & Institutions
-#### Specialized Focus Areas
-
-### 🎓 Fellowship Programs
-**Pathways for every career stage and interest:**
-
-#### Educational Programs
-#### Career Development
-#### Specialized Focus Areas
-
-### 📚 Resource Library
-**Essential tools for policy professionals and aspiring practitioners:**
-
-#### Thought Leaders & Newsletters
-#### Educational Resources
-#### Publications & Media
-
 ## 🛠️ Technical Implementation
 
-###Frontend Architecture
+### Frontend Architecture
 - **Framework:** Modern HTML5/CSS3/JavaScript
 - **Design System:** Clean, accessible interface with intuitive navigation
 - **Responsive Design:** Mobile-first approach ensuring accessibility across devices
